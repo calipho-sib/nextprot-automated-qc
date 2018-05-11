@@ -46,6 +46,7 @@ def testFile(file):
         urlTestResults.append(URLTestResult(urlTest, result))
     errors = filter(lambda x: x.result == False, urlTestResults)
     if(len(errors) > 0):
+        global success
         success = False
         print (str(len(errors)) + "/" + str(len(urlTestResults)) + " tests failed in " + file)
         for error in errors:
@@ -57,4 +58,5 @@ for file in glob.glob("test-specs/*.tsv"):
     testFile(file)
 
 if(not success):
+    print "JOB FAILED!"
     sys.exit(1)
