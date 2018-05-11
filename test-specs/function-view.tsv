@@ -1,0 +1,7 @@
+#You can write some comments
+/entry/NX_P52701/	containsText	DNA mismatch repair protein Msh6
+
+/entry/NX_P52701/	containsText	/term/FA-00969
+
+#You can negate
+/entry/NX_P52701/	!containsText	DNA mismatch repair MutS family
