@@ -31,6 +31,7 @@ def readFile(file):
     urls = []
     with open(file) as tsvfile:
         reader = csv.reader(tsvfile, delimiter='\t')
+        next(reader, None)  # skip the headers
         for row in reader:
             if((len(row) > 0) and (not row[0].startswith("#"))):
                 urls.append(URLTest(row[0], row[1], row[2]))
