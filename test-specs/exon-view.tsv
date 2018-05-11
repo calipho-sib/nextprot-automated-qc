@@ -1,2 +1,2 @@
 relativeUrl	expression	value	comment
-#/entry/NX_P52701/exons	containsText	2p16.3	#Check for position
+#/entry/NX_P52701/exons	containsText	2p16.3	#If commented in the beginning they will be skipped
