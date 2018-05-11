@@ -56,5 +56,5 @@ def testFile(file):
 for file in glob.glob("test-specs/*.tsv"):
     testFile(file)
 
-if(!success):
+if(not success):
     sys.exit(1)
