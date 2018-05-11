@@ -1,5 +1,6 @@
-import csv, urllib2, glob
+import csv, urllib2, glob, sys
 
+success = True
 urlBase = "https://www.nextprot.org"
 
 class URLTestResult:
@@ -45,13 +46,15 @@ def testFile(file):
         urlTestResults.append(URLTestResult(urlTest, result))
     errors = filter(lambda x: x.result == False, urlTestResults)
     if(len(errors) > 0):
+        success = False
         print (str(len(errors)) + "/" + str(len(urlTestResults)) + " tests failed in " + file)
         for error in errors:
             print ("\tERROR: " + buildUrl(error.urlTest.url) + " " + error.urlTest.expression + " " + error.urlTest.value)
-
     else:
         print (str(len(urlTestResults)) + " tests passed in " + file)
 
 for file in glob.glob("test-specs/*.tsv"):
     testFile(file)
 
+if(!success):
+    sys.exit(1)
