@@ -25,7 +25,7 @@ relativeUrl	expression	value	comment
 /entry/NX_P62805/exons	containsText	Mapping	# heading
 /entry/NX_P62805/exons	containsText	This protein has 14 Ensembl mappings.	# data
 /entry/NX_P78358/exons	containsText	This protein has 2 Ensembl mappings.	# data
-/entry/NX_P62805/exons	containsText	Alignment	# heading
+/entry/NX_P62805/exons	containsText	Alignment # heading
 /entry/NX_P62805/exons	containsText	The isoform is aligned on  ENSG00000197837	# data
 /entry/NX_P78358/exons	containsText	The isoforms are aligned on  ENSG00000184033	# data
 /entry/NX_P52701/exons	containsText	Isoform GTBP-alt is not aligned on gene.	# data
