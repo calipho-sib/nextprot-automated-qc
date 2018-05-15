@@ -1,2 +1,51 @@
 relativeUrl	expression	value	comment
 #/entry/NX_P52701/exons	containsText	2p16.3	#If commented in the beginning they will be skipped
+/entry/NX_P51587/exons	containsText	Gene information	# heading
+/entry/NX_Q86YC2/exons	containsText	Chromosomal location	# column title
+/entry/NX_P52701/exons	containsText	2p16.3	# data
+/entry/NX_Q96PT3/exons	containsText	unknown	# data
+/entry/NX_Q13069/exons	containsText	Xp11.2-p11.4	# data (range)
+/entry/NX_Q9BX63/exons	containsText	Orientation	# column title
+/entry/NX_P52701/exons	containsText	plus strand	# data
+/entry/NX_Q9NPG2/exons	containsText	minus strand	# data
+/entry/NX_P62805/exons	containsText	plus strand	# data
+/entry/NX_P62805/exons	containsText	minus strand	# data
+/entry/NX_Q6UWZ7/exons	containsText	Position on chromosome	# column title
+/entry/NX_P52701/exons	containsText	47,695,530 - 47,810,101	# data
+/entry/NX_A0A0C5B5G6/exons	containsText	648 - 1,601	# data
+/entry/NX_Q6P3X8/exons	containsText	248,906,196 - 248,919,946	# data 	
+/entry/NX_P52701/exons	containsText	114,572	# data
+/entry/NX_A0A0C5B5G6/exons	containsText	954	# data
+/entry/NX_Q06609/exons	containsText	Ensembl	# column title
+/entry/NX_P52701/exons	containsText	ENSG00000116062	# data
+/entry/NX_P78358/exons	containsText	ENSG00000268651	# data
+/entry/NX_P78358/exons	containsText	ENSG00000184033	# data
+/entry/NX_P62805/exons	containsText	Mapping	# heading
+/entry/NX_P62805/exons	containsText	This protein has 14 Ensembl mappings.	# data
+/entry/NX_P78358/exons	containsText	This protein has 2 Ensembl mappings.	# data
+/entry/NX_P62805/exons	containsText	Alignment	# heading
+/entry/NX_P62805/exons	containsText	The isoform is aligned on  ENSG00000197837	# data
+/entry/NX_P78358/exons	containsText	The isoforms are aligned on  ENSG00000184033	# data
+/entry/NX_P52701/exons	containsText	Isoform GTBP-alt is not aligned on gene.	# data
+/entry/NX_A0A0C5B5G6/exons	containsText	Isoform Iso 1 is not aligned on gene.	# data
+/entry/NX_A4D1B5/exons	containsText	Isoforms Iso 2, Iso 3 are not aligned on gene.	# data 
+/entry/NX_Q96PZ7/exons	containsText	Isoforms Iso 1, Iso 2, Iso 3, Iso 4 are not aligned on gene.	# data
+/entry/NX_Q13936/exons	containsText	Isoforms Iso 1, Iso 2, Iso 3, Iso 4, Iso 5, Iso 6, Iso 7, Iso 8, Iso 9, Iso 10, Iso 26, Iso 34 are not aligned on gene.	# data
+/entry/NX_Q96PT3/exons	containsText	Gene not mapped on the current assembly of the human genome.	# data
+/entry/NX_Q9UBV8/exons	containsText	Coding positions	# heading
+/entry/NX_P52701/exons	containsText	From 47,783,082 to 47,810,101 [length: 27,020 bp]	# data
+/entry/NX_P0DOY5/exons	containsText	From 105,919,502 to 105,919,516 [length: 15 bp]	# data
+/entry/NX_P11532/exons	containsText	From 31,225,599 to 33,317,899 [length: 2,092,301 bp]	# data
+/entry/NX_P02768/exons	containsText	Identifier	# column title
+/entry/NX_P52701/exons	containsText	ENSE00002301739	# data
+/entry/NX_P20933/exons	containsText	Coding for	# column title
+/entry/NX_Q06187/exons	containsText	(canonical)	# column title
+/entry/NX_P52701/exons	containsText	GTBP-N	# data
+/entry/NX_P02649/exons	containsText	Iso 1	# data
+/entry/NX_Q13936/exons	containsText	Iso 11	# data
+/entry/NX_P52701/exons	containsText	ENST00000234420	# data
+/entry/NX_P54278/exons	containsText	ENST00000265849	# data
+/entry/NX_P54278/exons	containsText	ENST00000382321	# data
+/entry/NX_P54278/exons	containsText	ENST00000406569	# data
+/entry/NX_P52701/exons	containsText	Met1 - 	# data
+/entry/NX_P40855/exons	containsText	Pro1 -	# data
