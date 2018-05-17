@@ -15,7 +15,7 @@ relativeUrl	expression	value	comment
 /entry/NX_Q6UWZ7/exons	containsText	Position on chromosome	# column title
 /entry/NX_P52701/exons	containsText	47,695,530 - 47,810,101	# data
 /entry/NX_A0A0C5B5G6/exons	containsText	648 - 1,601	# data
-/entry/NX_Q6P3X8/exons 	containsText	248,906,196 - 248,919,946	# data
+/entry/NX_Q6P3X8/exons  containsText	248,906,196 - 248,919,946	# data
 /entry/NX_P52701/exons	containsText	114,572	# data
 /entry/NX_A0A0C5B5G6/exons	containsText	954	# data
 /entry/NX_Q06609/exons	containsText	Ensembl	# column title
