@@ -1,0 +1,2 @@
+relativeUrl	expression	value	comment
+/term/HsapDO:0000001/protein	containsRegex	Proteins (\d+) to (\d+) of (\d+)	finds regex
