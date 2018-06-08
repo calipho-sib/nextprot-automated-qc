@@ -1,7 +1,10 @@
 import re, csv, urllib2, glob, sys, argparse
+from termcolor import cprint
 
 success = True
-baseUrlDefault = "https://www.nextprot.org"
+baseUrl = "https://www.nextprot.org"
+lastUrlRequested = ""
+lastContent = ""
 
 class URLTestResult:
     def __init__(self, URLTest, result):
@@ -15,21 +18,32 @@ class URLTest:
         self.value = value
         self.note = note
 
-def buildUrl(baseUrl, relativeUrl):
+def buildUrl(relativeUrl):
+    global baseUrl
     return baseUrl + relativeUrl + "?_escaped_fragment_="
 
 def checkForEachUrl(urlTest, params):
+    global lastUrlRequested, lastContent
     if(params.baseUrl):
-	url = buildUrl(params.baseUrl, urlTest.url)
+	url = buildUrl(urlTest.url)
     else:
-        url = buildUrl(baseUrlDefault, urlTest.url)
-    print("Requesting " + url + " ...")
-    content = urllib2.urlopen(url).read()
+        url = buildUrl(urlTest.url)
+    #print("Requesting " + url + " ...")
+    #If the url requested is the same, just return the last content
+    if(lastUrlRequested != url):
+        content = urllib2.urlopen(url).read()
+        lastUrlRequested = url
+        lastContent = content
+    else:
+        content = lastContent
+
     if(urlTest.expression == "containsText"):
         return urlTest.value in content
     if(urlTest.expression == "containsRegex"):
         pattern = re.compile(urlTest.value)
         searchResult = pattern.search(content)
+        if(searchResult is None):
+            return False
         return len(searchResult.groups()) > 0
     if(urlTest.expression == "!containsText"):
         return urlTest.value not in content
@@ -57,8 +71,12 @@ def testFile(file, params):
     urlTestResults = []
     urlTests = readFile(file)
     for urlTest in urlTests:
-        print("Testing " + urlTest.url + " (" + urlTest.note + ")")
+        print("Testing " + urlTest.url + "\t" +  urlTest.expression + "\t" + urlTest.value + "\n\t" + urlTest.note + "")
         result = checkForEachUrl(urlTest, params)
+        if(result):
+            cprint("\tOK", 'green')
+        else:
+            cprint("\tERROR", 'red')
         urlTestResults.append(URLTestResult(urlTest, result))
     errors = filter(lambda x: x.result == False, urlTestResults)
     if(len(errors) > 0):
@@ -82,6 +100,12 @@ if __name__ == '__main__':
     parser.add_argument('--file', help='the file to test (by default takes all files in test-specs)')
 
     args = parser.parse_args()
+
+    if(args.baseUrl):
+        baseUrl = args.baseUrl;
+        print("Overriding base url to " + baseUrl) 
+    else:
+        print("Default base url is: " + baseUrl + ", can be overriden by passing a parameter: python check.py --baseUrl http://alpha-search.nextprot.org")
 
     if(args.file):
         testFile(args.file, args)

@@ -1,2 +1,6 @@
 relativeUrl	expression	value	comment
-/term/HsapDO:0000001/protein	containsRegex	Proteins (\d+) to (\d+) of (\d+)	finds regex
+/term/HsapDO:0000001/proteins	containsRegex	Proteins (\d+) to (\d+) of (\d+)	A term should have relevant entries in the form of Protein 1 to 100 of 500
+/term/3.6.1.n2/protein	containsText	REACTION	The Enyzme L-cysteinyl-tRNA(Pro) should contain a REACTION tag
+/term/3.6.1.n2/protein	containsText	The enzyme from Escherichia coli also catalyzes the reaction of EC 3.6.1.n3.	The Enyzme L-cysteinyl-tRNA(Pro) should contain a COMMENT description related to the enzyme
+/term/CVCL_3449/	containsText	http://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi	Cellosaurus term CVCL_3449 should contain a link to NCBI taxonomy
+/term/CVCL_3449/	!containsText	COMMENT	Cellosaurus terms should not contain any COMMENT
