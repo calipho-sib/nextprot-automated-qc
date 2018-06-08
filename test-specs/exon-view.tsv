@@ -25,13 +25,13 @@ relativeUrl	expression	value	comment
 /entry/NX_P62805/exons	containsText	Mapping	# heading
 /entry/NX_P62805/exons	containsText	This protein has 14 Ensembl mappings.	# data
 /entry/NX_P78358/exons	containsText	This protein has 2 Ensembl mappings.	# data
-/entry/NX_P62805/exons	containsText	Alignment	# heading
-/entry/NX_P62805/exons	containsText	The isoform is aligned on  ENSG00000197837	# data
-/entry/NX_P78358/exons	containsText	The isoforms are aligned on  ENSG00000184033	# data
+/entry/NX_P62805/exons	containsText	ALIGNMENT	# heading 
+/entry/NX_P62805/exons	containsRegex	The isoform is aligned on(.{0,500})ENSG00000197837	# data
+/entry/NX_P78358/exons	containsRegex	The isoforms are aligned on(.{0,500})ENSG00000184033	# data
 /entry/NX_P52701/exons	containsText	Isoform GTBP-alt is not aligned on gene.	# data
-/entry/NX_A0A0C5B5G6/exons	containsText	Isoform Iso 1 is not aligned on gene.	# data
-/entry/NX_A4D1B5/exons	containsText	Isoforms Iso 2, Iso 3 are not aligned on gene.	# data 
-/entry/NX_Q96PZ7/exons	containsText	Isoforms Iso 1, Iso 2, Iso 3, Iso 4 are not aligned on gene.	# data
+/entry/NX_A0A0C5B5G6/exons	containsText	Isoform<--HTMLTAGS-->Iso 1<--HTMLTAGS-->is not aligned on gene.	# data
+/entry/NX_A4D1B5/exons	containsText	Isoforms<--HTMLTAGS-->Iso 2<--HTMLTAGS-->,<--HTMLTAGS-->Iso 3<--HTMLTAGS-->are not aligned on gene.	# data 
+/entry/NX_Q96PZ7/exons	containsText	Isoforms<--HTMLTAGS-->Iso 1<--HTMLTAGS-->,<--HTMLTAGS-->Iso 2<--HTMLTAGS-->,<--HTMLTAGS-->Iso 3<--HTMLTAGS-->,<--HTMLTAGS-->Iso 4<--HTMLTAGS-->are not aligned on gene.	# data
 /entry/NX_Q13936/exons	containsText	Isoforms Iso 1, Iso 2, Iso 3, Iso 4, Iso 5, Iso 6, Iso 7, Iso 8, Iso 9, Iso 10, Iso 26, Iso 34 are not aligned on gene.	# data
 /entry/NX_Q96PT3/exons	containsText	Gene not mapped on the current assembly of the human genome.	# data
 /entry/NX_Q9UBV8/exons	containsText	Coding positions	# heading
