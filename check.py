@@ -64,11 +64,13 @@ def readFile(file):
             lineCount = lineCount + 1
             if((len(row) > 0) and (not row[0].startswith("#"))):
                 try:
-                    urls.append(URLTest(row[0], row[1], str(row[2]).replace("<--HTMLTAGS-->", "((.|\\n|\\r){1,500})"), row[3]))
+                    if((not row[1] == "containsRegex") and (("ANY500CHARS" in str(row[2])) or ("ANY100CHARS" in str(row[2])) or ("ANY20CHARS" in str(row[2])))):
+                        cprint("Using keyword ...ANY[20|100|500]CHARS... and expression is different than containsRegex in line " + str(lineCount) + " using " + str(row[1] != "containsRegex"), 'yellow')
+                    urls.append(URLTest(row[0], row[1], str(row[2]).replace("...ANY20CHARS...", "((.|\\n|\\r){1,20})").replace("...ANY100CHARS...", "((.|\\n|\\r){1,100})").replace("...ANY500CHARS...", "((.|\\n|\\r){1,500})"), row[3]))
                 except:
                     print("Failed to read line " + str(lineCount) + " for " + str(file) + " found " + str(len(row)) + " columns. Minimum is 3. Row is: " + str(row));
-                    sys.exit(1);
                     raise;
+                    sys.exit(1);
     return urls;
 
 def saveErrors(errors):

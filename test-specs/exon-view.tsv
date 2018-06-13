@@ -26,18 +26,18 @@ relativeUrl	expression	value	comment
 /entry/NX_P62805/exons	containsText	This protein has 14 Ensembl mappings.	# data
 /entry/NX_P78358/exons	containsText	This protein has 2 Ensembl mappings.	# data
 /entry/NX_P62805/exons	containsText	ALIGNMENT	# heading 
-/entry/NX_P62805/exons	containsRegex	The isoform is aligned on<--HTMLTAGS-->ENSG00000197837	# data
-/entry/NX_P78358/exons	containsRegex	The isoforms are aligned on<--HTMLTAGS-->ENSG00000184033	# data
-/entry/NX_P52701/exons	containsRegex	Isoform<--HTMLTAGS-->GTBP-alt<--HTMLTAGS-->is not aligned on gene.	# data
-/entry/NX_A0A0C5B5G6/exons	containsRegex	Isoform<--HTMLTAGS-->Iso 1<--HTMLTAGS-->is not aligned on gene.	# data
-/entry/NX_A4D1B5/exons	containsRegex	Isoforms<--HTMLTAGS-->Iso 2<--HTMLTAGS-->Iso 3<--HTMLTAGS-->are not aligned on gene.	# data 
-/entry/NX_Q96PZ7/exons	containsRegex	Isoforms<--HTMLTAGS-->Iso 1<--HTMLTAGS-->Iso 2<--HTMLTAGS-->Iso 3<--HTMLTAGS-->Iso 4<--HTMLTAGS-->are not aligned on gene.	# data
-/entry/NX_Q13936/exons	containsRegex	Isoforms<--HTMLTAGS-->Iso 1<--HTMLTAGS-->Iso 2<--HTMLTAGS-->Iso 3<--HTMLTAGS-->Iso 4<--HTMLTAGS-->Iso 5<--HTMLTAGS-->Iso 6<--HTMLTAGS-->Iso 7<--HTMLTAGS-->Iso 8<--HTMLTAGS-->Iso 9<--HTMLTAGS-->Iso 10<--HTMLTAGS-->Iso 26<--HTMLTAGS-->Iso 34<--HTMLTAGS-->are not aligned on gene.	# data
+/entry/NX_P62805/exons	containsRegex	The isoform is aligned on...ANY500CHARS...ENSG00000197837	# data
+/entry/NX_P78358/exons	containsRegex	The isoforms are aligned on...ANY500CHARS...ENSG00000184033	# data
+/entry/NX_P52701/exons	containsRegex	Isoform...ANY500CHARS...GTBP-alt...ANY500CHARS...is not aligned on gene.	# data
+/entry/NX_A0A0C5B5G6/exons	containsRegex	Isoform...ANY500CHARS...Iso 1...ANY500CHARS...is not aligned on gene.	# data
+/entry/NX_A4D1B5/exons	containsRegex	Isoforms...ANY500CHARS...Iso 2...ANY500CHARS...Iso 3...ANY500CHARS...are not aligned on gene.	# data 
+/entry/NX_Q96PZ7/exons	containsRegex	Isoforms...ANY500CHARS...Iso 1...ANY500CHARS...Iso 2...ANY500CHARS...Iso 3...ANY500CHARS...Iso 4...ANY500CHARS...are not aligned on gene.	# data
+/entry/NX_Q13936/exons	containsRegex	Isoforms...ANY500CHARS...Iso 1...ANY500CHARS...Iso 2...ANY500CHARS...Iso 3...ANY500CHARS...Iso 4...ANY500CHARS...Iso 5...ANY500CHARS...Iso 6...ANY500CHARS...Iso 7...ANY500CHARS...Iso 8...ANY500CHARS...Iso 9...ANY500CHARS...Iso 10...ANY500CHARS...Iso 26...ANY500CHARS...Iso 34...ANY500CHARS...are not aligned on gene.	# data
 /entry/NX_Q96PT3/exons	containsText	Gene not mapped on the current assembly of the human genome.	# data
 /entry/NX_Q9UBV8/exons	containsText	Coding positions	# heading
-/entry/NX_P52701/exons	containsText	From 47,783,082 to 47,810,101 [length: 27,020 bp]	# data
-/entry/NX_P0DOY5/exons	containsText	From 105,919,502 to 105,919,516 [length: 15 bp]	# data
-/entry/NX_P11532/exons	containsText	From 31,225,599 to 33,317,899 [length: 2,092,301 bp]	# data
+/entry/NX_P52701/exons	containsRegex	From 47,783,082 to 47,810,101...ANY20CHARS...[length: 27,020 bp]	# data
+/entry/NX_P0DOY5/exons	containsRegex	From 105,919,502 to 105,919,516...ANY20CHARS...[length: 15 bp]	# data
+/entry/NX_P11532/exons	containsRegex	From 31,225,599 to 33,317,899...ANY20CHARS...[length: 2,092,301 bp]	# data
 /entry/NX_P02768/exons	containsText	Identifier	# column title
 /entry/NX_P52701/exons	containsText	ENSE00002301739	# data
 /entry/NX_P20933/exons	containsText	Coding for	# column title
