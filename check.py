@@ -5,7 +5,7 @@ from termcolor import cprint
 success = True
 baseUrl = "https://www.nextprot.org"
 lastUrlRequested = ""
-lastContent = ""
+lastTextContent = ""
 lastHTMLContent = ""
 
 class URLTestResult:
@@ -31,7 +31,7 @@ def buildUrl(relativeUrl):
     return baseUrl + relativeUrl + "?_escaped_fragment_="
 
 def getContent(urlTest, params):
-    global lastUrlRequested, lastContent, lastHTMLContent
+    global lastUrlRequested, lastTextContent, lastHTMLContent
     if(params.baseUrl):
 	url = buildUrl(urlTest.url)
     else:
@@ -41,26 +41,37 @@ def getContent(urlTest, params):
     if(lastUrlRequested != url):
         print("\tHTTP(S)_REQUEST: ... requesting content of " + url + " ...")
         lastHTMLContent = urllib2.urlopen(url).read()
-        lastContent = cleanHTML(lastHTMLContent)
+        lastTextContent = cleanHTML(lastHTMLContent)
         lastUrlRequested = url
     else:
         print("\tCACHED: Taking content of " + url + " from cache")
 
 def checkForEachUrl(urlTest, params):
     getContent(urlTest, params)
-    if(urlTest.expression == "containsHTML"):
-        return urlTest.value in lastHTMLContent
-    if(urlTest.expression == "containsText"):
-        return urlTest.value in lastContent
-    if(urlTest.expression == "containsRegex"):
+    if(urlTest.expression == "containsText" or urlTest.expression == "containsHTML"):
+        if(urlTest.expression == "containsText"):
+            return urlTest.value in lastTextContent
+        else:
+            return urlTest.value in lastHTMLContent
+    
+    elif(urlTest.expression == "!containsText" or urlTest.expression == "!containsHTML"):
+        if(urlTest.expression == "!containsText"):
+            return urlTest.value not in lastTextContent
+        else:
+            return urlTest.value not in lastHTMLContent
+    
+    elif((urlTest.expression == "containsRegexInText") or (urlTest.expression == "containsRegexInHTML")):
         pattern = re.compile(urlTest.value)
-        searchResult = pattern.search(lastContent)
+        if(urlTest.expression == "containsRegexInText"):
+            searchResult = pattern.search(lastTextContent)
+        else:
+            searchResult = pattern.search(lastHTMLContent)
         if(searchResult is None):
             return False
         return len(searchResult.groups()) > 0
-    if(urlTest.expression == "!containsText"):
-        return urlTest.value not in lastContent
-    print (urlTest.expression + " not known")
+
+    else:
+        print (urlTest.expression + " not known")
 
 def readFile(file):
     urls = []

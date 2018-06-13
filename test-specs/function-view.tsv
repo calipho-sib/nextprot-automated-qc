@@ -1,4 +1,4 @@
 relativeUrl	expression	value	comment
-/entry/NX_P52701/	containsText	DNA mismatch repair protein Msh6	#You can write some comments in the column 4
-/entry/NX_P52701/	containsText	/term/FA-00969	# you can leave empty lines in the source file
-/entry/NX_P52701/	!containsText	DNA mismatch repair MutS family	#You can negate
+/entry/NX_P52701/	containsText	DNA mismatch repair protein Msh6	The term page should contain some text relevant to mistmatch repair
+/entry/NX_P52701/	containsHTML	/term/FA-00969	There should be a link to DNA mismatch repair MutS family (nextprot link)
+/entry/NX_P52701/	!containsText	DNA mismatch repair MutS family	The term should not contain the family at the end (term spec)
