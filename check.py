@@ -6,6 +6,7 @@ success = True
 baseUrl = "https://www.nextprot.org"
 lastUrlRequested = ""
 lastContent = ""
+lastHTMLContent = ""
 
 class URLTestResult:
     def __init__(self, URLTest, result):
@@ -19,13 +20,18 @@ class URLTest:
         self.value = value
         self.note = note
 
+def cleanHTML(raw_html):
+  cleanr = re.compile('<.*?>')
+  cleantext = re.sub(cleanr, '', raw_html.replace("&nbsp;", " "))
+  return ' '.join(cleantext.split())
+
 def buildUrl(relativeUrl):
     #If if comes from failures it is already with http
     global baseUrl
     return baseUrl + relativeUrl + "?_escaped_fragment_="
 
-def checkForEachUrl(urlTest, params):
-    global lastUrlRequested, lastContent
+def getContent(urlTest, params):
+    global lastUrlRequested, lastContent, lastHTMLContent
     if(params.baseUrl):
 	url = buildUrl(urlTest.url)
     else:
@@ -34,24 +40,27 @@ def checkForEachUrl(urlTest, params):
     #If the url requested is the same, just return the last content
     if(lastUrlRequested != url):
         print("\tHTTP(S)_REQUEST: ... requesting content of " + url + " ...")
-        content = urllib2.urlopen(url).read()
+        lastHTMLContent = urllib2.urlopen(url).read()
+        lastContent = cleanHTML(lastHTMLContent)
         lastUrlRequested = url
-        lastContent = content
     else:
         print("\tCACHED: Taking content of " + url + " from cache")
-        content = lastContent
 
+def checkForEachUrl(urlTest, params):
+    getContent(urlTest, params)
+    if(urlTest.expression == "containsHTML"):
+        return urlTest.value in lastHTMLContent
     if(urlTest.expression == "containsText"):
-        return urlTest.value in content
+        return urlTest.value in lastContent
     if(urlTest.expression == "containsRegex"):
         pattern = re.compile(urlTest.value)
-        searchResult = pattern.search(content)
+        searchResult = pattern.search(lastContent)
         if(searchResult is None):
             return False
         return len(searchResult.groups()) > 0
     if(urlTest.expression == "!containsText"):
-        return urlTest.value not in content
-    print (urlTest.expression + " not known");
+        return urlTest.value not in lastContent
+    print (urlTest.expression + " not known")
 
 def readFile(file):
     urls = []
@@ -68,10 +77,10 @@ def readFile(file):
                         cprint("Using keyword ...ANY[20|100|500]CHARS... and expression is different than containsRegex in line " + str(lineCount) + " using " + str(row[1] != "containsRegex"), 'yellow')
                     urls.append(URLTest(row[0], row[1], str(row[2]).replace("...ANY20CHARS...", "((.|\\n|\\r){1,20})").replace("...ANY100CHARS...", "((.|\\n|\\r){1,100})").replace("...ANY500CHARS...", "((.|\\n|\\r){1,500})"), row[3]))
                 except:
-                    print("Failed to read line " + str(lineCount) + " for " + str(file) + " found " + str(len(row)) + " columns. Minimum is 3. Row is: " + str(row));
-                    raise;
-                    sys.exit(1);
-    return urls;
+                    print("Failed to read line " + str(lineCount) + " for " + str(file) + " found " + str(len(row)) + " columns. Minimum is 3. Row is: " + str(row))
+                    raise
+                    sys.exit(1)
+    return urls
 
 def saveErrors(errors):
     print("Writing remaining errors in errors.tsv")
@@ -124,7 +133,7 @@ if __name__ == '__main__':
 
     print("\n########### neXtProt Automated QC configuration ###########################################") 
     if(args.baseUrl):
-        baseUrl = args.baseUrl;
+        baseUrl = args.baseUrl
         print("## --baseUrl: Overriding base url with: " + baseUrl) 
     else:
         print("## --baseUrl: Default base url is: " + baseUrl + ", can be overriden by passing a parameter: python check.py --baseUrl http://alpha-search.nextprot.org")

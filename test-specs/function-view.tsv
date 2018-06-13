@@ -1,6 +1,4 @@
 relativeUrl	expression	value	comment
 /entry/NX_P52701/	containsText	DNA mismatch repair protein Msh6	#You can write some comments in the column 4
 /entry/NX_P52701/	containsText	/term/FA-00969	# you can leave empty lines in the source file
-
-
 /entry/NX_P52701/	!containsText	DNA mismatch repair MutS family	#You can negate
