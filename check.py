@@ -1,8 +1,6 @@
-import re, csv, urllib2, glob, sys, argparse
-import datetime
+import os, datetime, re, csv, urllib2, glob, sys, argparse
 from termcolor import cprint
 
-success = True
 baseUrl = "https://www.nextprot.org"
 lastUrlRequested = ""
 lastTextContent = ""
@@ -75,7 +73,7 @@ def checkForEachUrl(urlTest, params):
 
 def readFile(file):
     urls = []
-    print ("Reading " + str(file))
+    print ("Reading tests from " + str(file) + "\n")
     with open(file) as tsvfile:
         reader = csv.reader(tsvfile, delimiter='\t')
         lineCount = 1
@@ -108,7 +106,7 @@ def testFile(file, params):
     count = 1
     for urlTest in urlTests:
         start = datetime.datetime.now()
-        print(str(count) + "/" + str(len(urlTests)) + " Testing " + urlTest.url + "\t" +  urlTest.expression + "\t" + urlTest.value + "\n\tSpec: " + urlTest.note + "")
+        print(str(count) + "/" + str(len(urlTests)) + " Testing\n" + urlTest.url + "\t" +  urlTest.expression + "\t" + urlTest.value + "\t" + urlTest.note + "")
         result = checkForEachUrl(urlTest, params)
         end = datetime.datetime.now()
         diff = end - start
@@ -119,20 +117,7 @@ def testFile(file, params):
             cprint("\t%s in %d ms" %("ERROR", elapsed_ms), 'red')
         count = count + 1
         urlTestResults.append(URLTestResult(urlTest, result))
-    errors = filter(lambda x: x.result == False, urlTestResults)
-    if(len(errors) > 0):
-        global success
-        success = False
-        print (str(len(errors)) + "/" + str(len(urlTestResults)) + " tests failed in " + file)
-        for error in errors:
-            print ("\tERROR: " + buildUrl(error.urlTest.url) + " " + error.urlTest.expression + " " + error.urlTest.value)
-        saveErrors(errors)
-    else:
-        print (str(len(urlTestResults)) + " tests passed in " + file)
-
-if(not success):
-    print "JOB FAILED!"
-    sys.exit(1)
+    return urlTestResults
 
 if __name__ == '__main__':
 
@@ -149,12 +134,26 @@ if __name__ == '__main__':
     else:
         print("## --baseUrl: Default base url is: " + baseUrl + ", can be overriden by passing a parameter: python check.py --baseUrl http://alpha-search.nextprot.org")
 
+    report = []
     if(args.file):
         print("## --file: Using file " + args.file) 
         print("###########################################################################################\n") 
-        testFile(args.file, args)
+        report.extend(testFile(args.file, args))
     else:
         print("## --file: Using all files in folder test-specs") 
         print("###########################################################################################\n") 
         for file in glob.glob("test-specs/*.tsv"):
-            testFile(file, args)
+            report.extend(testFile(file, args))
+
+    errors = filter(lambda x: x.result == False, report)
+    if(len(errors) > 0):
+        print (str(len(errors)) + "/" + str(len(report)) + " tests failed in " + str(args.file))
+        for error in errors:
+            print ("\tERROR: " + buildUrl(error.urlTest.url) + " " + error.urlTest.expression + " " + error.urlTest.value)
+        saveErrors(errors)
+        sys.exit(1)
+    else:
+        if os.path.exists("errors.tsv"):
+            os.remove("errors.tsv")
+            print("Removing errors file")
+        print (str(len(report)) + " tests passed in " + str(args.file))
