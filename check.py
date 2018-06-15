@@ -57,7 +57,11 @@ def checkForEachUrl(urlTest, params):
             return urlTest.value not in lastTextContent
         else:
             return urlTest.value not in lastHTMLContent
-    
+
+    elif(urlTest.expression == "countOnceInText"):
+        _, count = re.subn(r'%s' % urlTest.value , '', lastTextContent, flags=re.I)
+        return count == 1
+
     elif((urlTest.expression == "containsRegexInText") or (urlTest.expression == "containsRegexInHTML")):
         pattern = re.compile(urlTest.value)
         if(urlTest.expression == "containsRegexInText"):
@@ -82,9 +86,7 @@ def readFile(file):
             lineCount = lineCount + 1
             if((len(row) > 0) and (not row[0].startswith("#"))):
                 try:
-                    if((not row[1] == "containsRegex") and (("ANY500CHARS" in str(row[2])) or ("ANY100CHARS" in str(row[2])) or ("ANY20CHARS" in str(row[2])))):
-                        cprint("Using keyword ...ANY[20|100|500]CHARS... and expression is different than containsRegex in line " + str(lineCount) + " using " + str(row[1] != "containsRegex"), 'yellow')
-                    urls.append(URLTest(row[0], row[1], str(row[2]).replace("...ANY20CHARS...", "((.|\\n|\\r){1,20})").replace("...ANY100CHARS...", "((.|\\n|\\r){1,100})").replace("...ANY500CHARS...", "((.|\\n|\\r){1,500})"), row[3]))
+                    urls.append(URLTest(row[0], row[1], str(row[2]), row[3]))
                 except:
                     print("Failed to read line " + str(lineCount) + " for " + str(file) + " found " + str(len(row)) + " columns. Minimum is 3. Row is: " + str(row))
                     raise
@@ -102,7 +104,11 @@ def saveErrors(errors):
 def testFile(file, params):
     urlTestResults = []
     urlTests = readFile(file)
-    urlTests = sorted(urlTests, key=lambda ut: ut.url)
+    
+    if(params.row):
+        urlTests = [urlTests[int(params.row)]]
+    else: urlTests = sorted(urlTests, key=lambda ut: ut.url)
+
     count = 1
     for urlTest in urlTests:
         start = datetime.datetime.now()
@@ -115,8 +121,8 @@ def testFile(file, params):
             cprint("\t%s in %d ms" %("OK", elapsed_ms), 'green')
         else:
             cprint("\t%s in %d ms" %("ERROR", elapsed_ms), 'red')
-        count = count + 1
         urlTestResults.append(URLTestResult(urlTest, result))
+        count = count + 1
     return urlTestResults
 
 if __name__ == '__main__':
@@ -124,6 +130,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Automated neXtprot QC')
     parser.add_argument('--baseUrl', help='the api url example: http://alpha-api.nextprot.org')
     parser.add_argument('--file', help='the file to test (by default takes all files in test-specs)')
+    parser.add_argument('--row', help='the row number from the --file to test')
 
     args = parser.parse_args()
 
