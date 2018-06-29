@@ -7,3 +7,4 @@ relativeUrl	expression	value	comment
 /term/CVCL_0238/	!containsText	SEX OF CELL	Sex of cell should not be displayed (SP_TV_10)
 /term/DO-00353/	!containsText	UniProt domain:	UniProt domain should not be contained in the external crossref section SP_TV_96, NEXTPROT-1563
 /term/DI-00001/	countOnceInText	ABBREVIATION	The keywork ABBREVIATION should be counted only once in the text
+/term/KW-0325/	!containsText	CVC	carbohydrate terms should not be included in the page (obsolete terms)
