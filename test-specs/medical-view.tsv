@@ -1,0 +1,9 @@
+relativeUrl	expression	value	comment
+/entry/NX_P38398/medical	containsText	Breast cancer type 1 susceptibility protein [ EC 2.3.2.27 ]	SP_MV_01 Check overview is displayed (test protein recommended name is found)
+/entry/NX_P38398/medical	containsText	Change isoform	SP_MV_01 Check isoform selector is displayed (test button text is found)
+/entry/NX_Q5T0J3/medical	containsText	COSMIC	SP_MV_01 Check positional annotations related to medicine is displayed (test source is found)
+/entry/NX_Q75NE6/medical	containsText	Orphanet	SP_MV_01 Check general annotations related to medicine are displayed (test source is found)
+/entry/NX_Q5TEV5/medical	containsText	There is no medical information available	SP_MV_01 Check display message when there are no general annotations related to function
+/entry/NX_Q156A1/medical	containsText	Keywords	SP_MV_01 Check relevant keywords are displayed (test heading is found)
+/entry/NX_Q5JT78/medical	containsText	Further external links	SP_MV_01 Check relevant cross-references are displayed (test heading is found)
+/entry/NX_Q75NE6/medical	containsText	Any medical or genetic information present	SP_MV_01 Check disclaimer are displayed (test text is found)
