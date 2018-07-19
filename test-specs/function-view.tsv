@@ -1,4 +1,8 @@
 relativeUrl	expression	value	comment
-/entry/NX_P52701/	containsText	DNA mismatch repair protein Msh6	The term page should contain some text relevant to mistmatch repair
+/entry/NX_P52701/	containsText	DNA mismatch repair protein Msh6	SP_FV_01 Check overview is displayed (test protein recommended name is found)
+/entry/NX_P52701/	containsText	GO MOLECULAR FUNCTION	SP_FV_01 Check general annotations related to function are displayed (test heading is found)
+/entry/NX_Q6NUN7/	containsText	Keywords	SP_FV_01 Check relevant keywords are displayed (test heading is found)
+/entry/NX_Q5TG92/	containsText	There is no function information available	SP_FV_01 Check display message when there are no general annotations related to function
+/entry/NX_Q53S99/	containsText	Further external links	SP_FV_01 Check relevant cross-references are displayed (test heading is found)
 /entry/NX_P52701/	containsHTML	/term/FA-00969	There should be a link to DNA mismatch repair MutS family (nextprot link)
 /entry/NX_P52701/	!containsText	DNA mismatch repair MutS family	The term should not contain the family at the end (term spec)
