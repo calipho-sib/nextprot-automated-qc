@@ -1,0 +1,7 @@
+relativeUrl	expression	value	comment
+/entry/NX_P0C6T2/structures	containsText	Dolichyl-diphosphooligosaccharide--protein glycosyltransferase subunit 4	Check overview is displayed (test protein recommended name is found)
+/entry/NX_P0CJ76/structures	containsText	There is no PDB entry for any isoform	Check display message when there are no annotations related to structure
+/entry/NX_P15529/structures	containsText	Change isoform	Check isoform selector is displayed (test button text is found)
+/entry/NX_Q8IVG9/structures	containsText	Helix	Check positional annotations related to structure are displayed (test feature type is found)
+/entry/NX_P0C5K6/structures	containsText	Further external links	Check relevant cross-references are displayed in a separated section (test heading is found)
+/entry/NX_P0C5K6/structures	containsText	ProteinModelPortal	Check cross-reference to ProteinModelPortal is displayed (test text is found)
