@@ -1,0 +1,5 @@
+relativeUrl	expression	value	comment
+/entry/NX_Q8TD91/sequence	containsText	Melanoma-associated antigen C3	SP_SV_01 Check overview is displayed (test protein recommended name is found)
+/entry/NX_Q9Y5P2/sequence	containsText	Change isoform	SP_SV_01 Check isoform selector is displayed (test button text is found)
+/entry/NX_Q9UBB5/sequence	containsText	Description	SP_SV_01 Check tri-viewer with positional annotations related to the sequence is displayed (test feature table heading is found)
+/entry/NX_Q13536/sequence	!containsText	There is no sequence information available	SP_SV_01 Check do NOT display message there is no sequence information
