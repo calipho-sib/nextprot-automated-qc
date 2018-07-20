@@ -1,0 +1,12 @@
+relativeUrl	expression	value	comment
+/entry/NX_Q96S44/interactions	containsText	TP53-regulating kinase [ EC 2.7.11.1 ]	SP_IV_01 Check overview is displayed (test protein recommended name is found)
+/entry/NX_Q99728/interactions	containsText	Interaction with BRCA1	SP_IV_01 Check locations of interacting regions are displayed (test text is found)
+/entry/NX_P11388/interactions	containsText	Change isoform	SP_IV_01 Check isoform selector is displayed (test button text is found)
+/entry/NX_Q8N6T0/interactions	containsText	Isoform 3	SP_IV_30 SP_GAS_12 Check isoform specificity of annotation is displayed (test text is found)
+/entry/NX_Q6UX34/interactions	containsText	PROTEIN-PROTEIN INTERACTION	SP_IV_01 Check general annotations related to interactions are displayed (test heading is found)
+/entry/NX_Q9H1Z8/interactions	containsText	Further external links	SP_IV_01 SP_IV_81 Check relevant cross-references are displayed in a separated section (test heading is found)
+/entry/NX_Q5TG92/interactions	containsText	There is no interaction information available	SP_IV_01 Check display message when there are no general annotations related to interactions
+/entry/NX_Q6NUN7/interactions	containsText	122952	SP_IV_85 Check cross-reference to BioGrid is displayed (test link text is found)
+/entry/NX_Q96LM9/interactions	containsText	IntAct	SP_IV_85 Check cross-reference to IntAct is displayed (test text is found)
+/entry/NX_Q53S99/interactions	containsText	MINT-4722244	SP_IV_85 Check cross-reference to MINT is displayed (test link text is found)
+/entry/NX_Q5T035/interactions	containsText	9606.ENSP00000364568	SP_IV_85 Check cross-reference to STRING is displayed (test link text is found)
