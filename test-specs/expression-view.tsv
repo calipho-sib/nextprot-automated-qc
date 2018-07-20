@@ -1,0 +1,7 @@
+relativeUrl	expression	value	comment
+/entry/NX_Q9HCU8/expression	containsText	DNA polymerase delta subunit 4	SP_EV_01 Check overview is displayed (test protein recommended name is found)
+/entry/NX_P35670/expression	!containsText	Change isoform	SP_EV_01 Check isoform selector is NOT displayed (test button text is NOT found)
+/entry/NX_Q9UQ84/expression	containsText	expressed	SP_EV_01 Check general annotations related to expression are displayed (test word found in annotations is found)
+/entry/NX_Q5JT78/expression	containsText	There is no expression information available	SP_EV_01 Check display message when there are no general annotations related to function
+/entry/NX_Q7Z5H4/expression	containsText	Further external links	SP_EV_01 Check relevant cross-references are displayed (test heading is found)
+/entry/NX_P35670/expression	containsText	Isoform Iso 2	SP_EV_30 SP_GAS_12 Check isoform specificity of an annotation is displayed (test text is found)
