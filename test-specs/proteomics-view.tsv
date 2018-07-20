@@ -1,0 +1,5 @@
+relativeUrl	expression	value	comment
+/entry/NX_P0DOY5/proteomics	containsText	Immunoglobulin heavy diversity 1-1	SP_PRV_01 Check overview is displayed (test protein recommended name is found)
+/entry/NX_P43088/proteomics	containsText	Change isoform	SP_PRV_01 Check isoform selector is displayed (test button text is found)
+/entry/A0A0A0MT76/proteomics	containsText	Peptide	SP_PRV_01 Check positional annotations related to proteomics are displayed (test feature name is found)
+/entry/NX_P0CJ73/proteomics	!containsText	There is no proteomics information available	SP_SV_01 Check do NOT display message there is no proteomics information (Proteomics: no in search results)
