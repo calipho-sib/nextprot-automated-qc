@@ -4,5 +4,6 @@ relativeUrl	expression	value	comment
 /entry/NX_Q6NUN7/	containsText	Keywords	SP_FV_01 Check relevant keywords are displayed (test heading is found)
 /entry/NX_Q5TG92/	containsText	There is no function information available	SP_FV_01 Check display message when there are no general annotations related to function
 /entry/NX_Q53S99/	containsText	Further external links	SP_FV_01 Check relevant cross-references are displayed (test heading is found)
+/entry/NX_P43246/	!containsText	Change isoform	SP_FV_01 Check isoform selector is NOT displayed (test button text is NOT found) 
 /entry/NX_P52701/	containsHTML	/term/FA-00969	There should be a link to DNA mismatch repair MutS family (nextprot link)
 /entry/NX_P52701/	!containsText	DNA mismatch repair MutS family	The term should not contain the family at the end (term spec)
