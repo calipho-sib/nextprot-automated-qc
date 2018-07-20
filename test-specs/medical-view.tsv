@@ -7,3 +7,4 @@ relativeUrl	expression	value	comment
 /entry/NX_Q156A1/medical	containsText	Keywords	SP_MV_01 Check relevant keywords are displayed (test heading is found)
 /entry/NX_Q5JT78/medical	containsText	Further external links	SP_MV_01 Check relevant cross-references are displayed (test heading is found)
 /entry/NX_Q75NE6/medical	containsText	Any medical or genetic information present	SP_MV_01 Check disclaimer are displayed (test text is found)
+/entry/NX_Q156A1/medical	containsText	POLYMORPHISM	SP_MV_36 Check variant-info annotation is displayed (test heading is found)
