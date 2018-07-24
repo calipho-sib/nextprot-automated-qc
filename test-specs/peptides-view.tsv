@@ -1,2 +1,3 @@
 relativeUrl	expression	value	comment
 /NX_P02671/peptides	containsText	Fibrinogen alpha chain	Check overview is displayed (test protein recommended name is found)
+/NX_O95567/peptides	containsText	SRM Peptide	Check positional annotations related to peptides are displayed (test feature type is found)
