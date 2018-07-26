@@ -102,6 +102,8 @@ def readFile(file):
                 except:
                     print("Failed to read line " + str(lineCount) + " for " + str(file) + " found " + str(len(row)) + " columns. Minimum is 3. Row is: " + str(row))
                     raise
+            elif (row[0].startswith("#")):
+                cprint("Skipping test: " + str(row), 'yellow')
     return urls
 
 def saveErrors(errors):
