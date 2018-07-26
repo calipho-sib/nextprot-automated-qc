@@ -34,7 +34,9 @@ done
 # Check if there are still some errors
 if [ -f errors.tsv ]; then
    read lines words chars filename <<< $(wc errors.tsv)
-   printf "Failed with $lines errors:\n"
+   #need to remove the header
+   errorsCount=`expr $lines - 1`
+   printf "Failed with $errorsCount errors:\n"
    cat errors.tsv
    exit 1
 else
