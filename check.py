@@ -76,7 +76,7 @@ def checkForEachUrl(urlTest, params):
 
 def readFile(file):
     urls = []
-    print ("Reading tests from " + str(file) + "\n")
+    cprint ("\nReading tests from " + str(file) + "\n", "blue")
     with open(file) as tsvfile:
         reader = csv.reader(tsvfile, delimiter='\t')
         lineCount = 1
