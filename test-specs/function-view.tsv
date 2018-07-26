@@ -5,7 +5,7 @@ relativeUrl	expression	value	comment
 /entry/NX_Q5TG92/	containsText	There is no function information available	SP_FV_01 Check display message when there are no general annotations related to function
 /entry/NX_Q53S99/	containsText	Further external links	SP_FV_01 SP_FV_81 Check relevant cross-references are displayed in a separated section (test heading is found)
 /entry/NX_P43246/	!containsText	Change isoform	SP_FV_01 Check isoform selector is NOT displayed (test button text is NOT found)
-/entry/NX_P52701/	containsText	Not protein homodimerization activity	SP_FV_30 SP_GAS_14 Check negative evidences of annotation is displayed (test text is found)
+/entry/NX_P52701/	containsRegexInHTML	Not((.|\n){1,20})protein homodimerization activity	SP_FV_30 SP_GAS_14 Check negative evidences of annotation is displayed (test text is found)
 /entry/NX_Q8N6T0/	containsText	Isoform Iso 3	SP_FV_30 SP_GAS_12 Check isoform specificity of annotation is displayed (test text is found)
 /entry/NX_Q7RTU4/	containsText	GO BIOLOGICAL PROCESS	SP_FV_33 SP_FV_36 Check GO-biological-process annotations are displayed under appropriate category title (test heading is found)
 /entry/NX_Q53S99/	containsText	CAUTION	SP_FV_33 SP_FV_36 Check caution annotations are displayed under appropriate category title (test heading is found)
