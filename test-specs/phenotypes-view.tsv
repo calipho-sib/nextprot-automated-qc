@@ -1,5 +1,5 @@
 relativeUrl	expression	value	comment
 #Phenotypes are still on an iframe therefore the url is different			
-/viewers/phenotypes/app/index.html?nxentry=NX_P20585	containsText	DNA mismatch repair protein Msh6 ( hMSH6 )	Check overview is displayed (test protein recommended name is found)
+/viewers/phenotypes/app/index.html?nxentry=NX_P52701	containsText	DNA mismatch repair protein Msh6 ( hMSH6 )	Check overview is displayed (test protein recommended name is found)
 /viewers/phenotypes/app/index.html?nxentry=NX_P43246	containsText	Impact on	Check phenotypes section is displayed (test text is found)
 /viewers/phenotypes/app/index.html?nxentry=NX_P20585	containsText	No phenotype annotation is available	Check display message when there are no annotations related to phenotype
