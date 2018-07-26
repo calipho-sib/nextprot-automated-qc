@@ -1,4 +1,4 @@
-import os, datetime, re, csv, urllib2, glob, sys, argparse
+import os, datetime, re, csv, urllib2, glob, sys, argparse, time
 from termcolor import cprint
 
 baseUrl = "https://www.nextprot.org"
@@ -36,17 +36,20 @@ def getContent(urlTest, params):
     if(lastUrlRequested != url):
         print("\tHTTP(S)_REQUEST: ... requesting content of " + url + " ...")
         success = True
-        maxAttemps = 3
-        for x in range(0, maxAttemps):
+        maxAttemps = 5
+        for x in range(1, (maxAttemps + 1)):
             try: 
                 lastHTMLContent = urllib2.urlopen(url).read()
                 break
             except Exception, e:
-                print(e)
-                time.sleep(3)
-                print("Retrying in 3 seconds ... Attempt " + x)
-                if(x== (maxAttemps - 1)):
+                if(x == maxAttemps):
+                    print("FATAL! Failed too many times to request HTTP service, exiting with failure")
                     sys.exit(1)
+                print(e)
+                sleeptime = x * 1
+                print("Retrying in " + str(sleeptime) + " seconds ... Attempt " + str(x+1) + ", Max attempts: " + str(maxAttemps))
+                time.sleep(sleeptime)
+                print("\tHTTP(S)_REQUEST: ... requesting content of " + url + " ...")
         lastTextContent = cleanHTML(lastHTMLContent)
         lastUrlRequested = url
     else:
