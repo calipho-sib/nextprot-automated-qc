@@ -1,7 +1,7 @@
 relativeUrl	expression	value	comment
-/NX_P02671/peptides	containsText	Fibrinogen alpha chain	Check overview is displayed (test protein recommended name is found)
-/NX_O95567/peptides	containsText	SRM Peptide	Check positional annotations related to peptides are displayed (test feature type is found)
-/NX_Q96DE9/peptides	containsText	unambiguous peptides	Check isoform sequence is displayed (test heading is found)
-/NX_A0A0C5B5G6/peptides	!containsText	Natural peptides	Check do not display distribution for natural peptides when there are none (test heading is found)
-/NX_Q96LI9/peptides	!containsText	Natural peptides	Check do not display distribution for natural peptides when there are only SRM peptides (test heading is found)
-/NX_A0A0A0MT89/peptides	containsText	Natural peptides	Check display distribution for natural peptides when there are peptides (test heading is found)
+/entry/NX_P02671/peptides	containsText	Fibrinogen alpha chain	Check overview is displayed (test protein recommended name is found)
+/entry/NX_O95567/peptides	containsText	SRM Peptide	Check positional annotations related to peptides are displayed (test feature type is found)
+/entry/NX_Q96DE9/peptides	containsText	unambiguous peptides	Check isoform sequence is displayed (test heading is found)
+/entry/NX_A0A0C5B5G6/peptides	!containsText	Natural peptides	Check do not display distribution for natural peptides when there are none (test heading is found)
+/entry/NX_Q96LI9/peptides	!containsText	Natural peptides	Check do not display distribution for natural peptides when there are only SRM peptides (test heading is found)
+/entry/NX_A0A0A0MT89/peptides	containsText	Natural peptides	Check display distribution for natural peptides when there are peptides (test heading is found)
