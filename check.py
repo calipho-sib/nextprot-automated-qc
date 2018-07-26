@@ -89,7 +89,6 @@ def readFile(file):
                 except:
                     print("Failed to read line " + str(lineCount) + " for " + str(file) + " found " + str(len(row)) + " columns. Minimum is 3. Row is: " + str(row))
                     raise
-                    sys.exit(1)
     return urls
 
 def saveErrors(errors):
@@ -157,7 +156,6 @@ if __name__ == '__main__':
         for error in errors:
             print ("\tERROR: " + buildUrl(error.urlTest.url) + " " + error.urlTest.expression + " " + error.urlTest.value)
         saveErrors(errors)
-        sys.exit(1)
     else:
         if os.path.exists("errors.tsv"):
             os.remove("errors.tsv")
