@@ -59,8 +59,7 @@ def checkForEachUrl(urlTest, params):
             return urlTest.value not in lastHTMLContent
 
     elif(urlTest.expression == "countOnceInText"):
-        _, count = re.subn(r'%s' % urlTest.value , '', lastTextContent, flags=re.I)
-        return count == 1
+        return lastTextContent.count(urlTest.value) == 1
 
     elif((urlTest.expression == "containsRegexInText") or (urlTest.expression == "containsRegexInHTML")):
         pattern = re.compile(urlTest.value)
