@@ -117,9 +117,9 @@ def testFile(file, params):
         diff = end - start
         elapsed_ms = (diff.days * 86400000) + (diff.seconds * 1000) + (diff.microseconds / 1000)
         if(result):
-            cprint("\t%s in %d ms" %("OK", elapsed_ms), 'green')
+            cprint("\t%s in %d ms" %("Test passed in ", elapsed_ms), 'green')
         else:
-            cprint("\t%s in %d ms" %("ERROR", elapsed_ms), 'red')
+            cprint("\t%s in %d ms" %("Failed in", elapsed_ms), 'red')
         urlTestResults.append(URLTestResult(urlTest, result))
         count = count + 1
     return urlTestResults
