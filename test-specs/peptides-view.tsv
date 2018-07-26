@@ -1,7 +1,7 @@
 relativeUrl	expression	value	comment
 /entry/NX_P02671/peptides	containsText	Fibrinogen alpha chain	Check overview is displayed (test protein recommended name is found)
-/viewers/peptides/app/index.html?nxentry=NX_O95567	containsText	SRM Peptide	Check positional annotations related to peptides are displayed (test feature type is found)
-/viewers/peptides/app/index.html?nxentry=NX_Q96DE9	containsText	unambiguous peptides	Check isoform sequence is displayed (test heading is found)
-/viewers/peptides/app/index.html?nxentry=NX_A0A0C5B5G6	!containsText	Natural peptides	Check do not display distribution for natural peptides when there are none (test heading is found)
-/viewers/peptides/app/index.html?nxentry=NX_Q96LI9	!containsText	Natural peptides	Check do not display distribution for natural peptides when there are only SRM peptides (test heading is found)
-/viewers/peptides/app/index.html?nxentry=NX_A0A0A0MT89	containsText	Natural peptides	Check display distribution for natural peptides when there are peptides (test heading is found)
+/viewers/peptides/app/index.html?nxentry=NX_O95567&env=alpha	containsText	SRM Peptide	Check positional annotations related to peptides are displayed (test feature type is found)
+/viewers/peptides/app/index.html?nxentry=NX_Q96DE9&env=alpha	containsText	unambiguous peptides	Check isoform sequence is displayed (test heading is found)
+/viewers/peptides/app/index.html?nxentry=NX_A0A0C5B5G6&env=alpha	!containsText	Natural peptides	Check do not display distribution for natural peptides when there are none (test heading is found)
+/viewers/peptides/app/index.html?nxentry=NX_Q96LI9&env=alpha	!containsText	Natural peptides	Check do not display distribution for natural peptides when there are only SRM peptides (test heading is found)
+/viewers/peptides/app/index.html?nxentry=NX_A0A0A0MT89&env=alpha	containsText	Natural peptides	Check display distribution for natural peptides when there are peptides (test heading is found)
