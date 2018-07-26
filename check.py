@@ -35,7 +35,18 @@ def getContent(urlTest, params):
     #If the url requested is the same, just return the last content
     if(lastUrlRequested != url):
         print("\tHTTP(S)_REQUEST: ... requesting content of " + url + " ...")
-        lastHTMLContent = urllib2.urlopen(url).read()
+        success = True
+        maxAttemps = 3
+        for x in range(0, maxAttemps):
+            try: 
+                lastHTMLContent = urllib2.urlopen(url).read()
+                break
+            except Exception, e:
+                print(e)
+                time.sleep(3)
+                print("Retrying in 3 seconds ... Attempt " + x)
+                if(x== (maxAttemps - 1)):
+                    sys.exit(1)
         lastTextContent = cleanHTML(lastHTMLContent)
         lastUrlRequested = url
     else:
