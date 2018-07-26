@@ -20,8 +20,8 @@ COUNTER=0
 while [ $COUNTER -lt 3 ] && [ -f errors.tsv ]; do
   if [ -f errors.tsv ]
   then
-      echo "Retrying with the remaining errors in 5 seconds ... "
-      sleep 5
+      echo "\n\nRetrying with the remaining errors in 3 seconds ... "
+      sleep 3
       python check.py --baseUrl $BASE_URL --file errors.tsv
   else
       rm errors.tsv
