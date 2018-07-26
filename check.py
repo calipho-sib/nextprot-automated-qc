@@ -111,6 +111,7 @@ def testFile(file, params):
     for urlTest in urlTests:
         start = datetime.datetime.now()
         print(str(count) + "/" + str(len(urlTests)) + " Testing\n" + urlTest.url + "\t" +  urlTest.expression + "\t" + urlTest.value + "\t" + urlTest.note + "")
+        sys.stdout.flush()
         result = checkForEachUrl(urlTest, params)
         end = datetime.datetime.now()
         diff = end - start
