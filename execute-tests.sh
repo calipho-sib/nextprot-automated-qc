@@ -34,7 +34,7 @@ done
 # Check if there are still some errors
 if [ -f errors.tsv ]; then
    read lines words chars filename <<< $(wc errors.tsv)
-   echo "Failed with $lines errors:\n"
+   printf "Failed with $lines errors:\n"
    cat errors.tsv
    exit 1
 else
