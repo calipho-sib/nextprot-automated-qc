@@ -26,7 +26,10 @@ def cleanHTML(raw_html):
 def buildUrl(relativeUrl):
     #If if comes from failures it is already with http
     global baseUrl
-    return baseUrl + relativeUrl + "?_escaped_fragment_="
+    if("?" in relativeUrl):
+        return baseUrl + relativeUrl + "&_escaped_fragment_="
+    else:
+        return baseUrl + relativeUrl + "?_escaped_fragment_="
 
 def getContent(urlTest, params):
     global lastUrlRequested, lastTextContent, lastHTMLContent
