@@ -8,4 +8,4 @@ relativeUrl	expression	value	comment
 /term/DO-00353/	!containsText	UniProt domain:	UniProt domain should not be contained in the external crossref section SP_TV_96, NEXTPROT-1563
 /term/DI-00001/	countOnceInText	ABBREVIATION	The keywork ABBREVIATION should be counted only once in the text
 /term/KW-0325/	!containsText	CVC	carbohydrate terms should not be included in the page (obsolete terms)
-#/term/1...-/	!containsText	Relevant for	For a term where the ID is wrong, relevant for section should not be displayed
+#TODO_NEED_TO_FIX_THIS_WITH_POLYMER_DO_NOT_USE_HIDDEN_TAG/term/1...-/	!containsText	Relevant for	For a term where the ID is wrong, relevant for section should not be displayed
