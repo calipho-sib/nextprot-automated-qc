@@ -30,10 +30,7 @@ def buildUrl(relativeUrl):
 
 def getContent(urlTest, params):
     global lastUrlRequested, lastTextContent, lastHTMLContent
-    if(params.baseUrl):
-	url = buildUrl(urlTest.url)
-    else:
-        url = buildUrl(urlTest.url)
+    url = buildUrl(urlTest.url)
 
     #If the url requested is the same, just return the last content
     if(lastUrlRequested != url):
