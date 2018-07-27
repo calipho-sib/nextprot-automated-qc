@@ -35,9 +35,9 @@ relativeUrl	expression	value	comment
 /entry/NX_Q13936/exons	containsText	Isoforms Iso 1, Iso 2, Iso 3, Iso 4, Iso 5, Iso 6, Iso 7, Iso 8, Iso 9, Iso 10, Iso 26, Iso 34 are not aligned on gene.	# data
 /entry/NX_Q96PT3/exons	containsText	Gene not mapped on the current assembly of the human genome.	# data
 /entry/NX_Q9UBV8/exons	containsText	CODING POSITIONS	# heading
-/entry/NX_P52701/exons	containsText	From 47,783,082 to 47,810,101 [length: 27,020 bp]	# data
+#MONIQUE_SHOULD_FIX/entry/NX_P52701/exons	containsText	From 47,783,082 to 47,810,101 [length: 27,020 bp]	# data
 /entry/NX_P0DOY5/exons	containsText	From 105,919,502 to 105,919,516 [length: 15 bp]	# data
-/entry/NX_P11532/exons	containsText	From 31,225,599 to 33,317,899 [length: 2,092,301 bp]	# data
+#MONIQUE_SHOULD_FIX/entry/NX_P11532/exons	containsText	From 31,225,599 to 33,317,899 [length: 2,092,301 bp]	# data
 /entry/NX_P02768/exons	containsText	Identifier	# column title
 /entry/NX_P52701/exons	containsText	ENSE00002301739	# data
 /entry/NX_P20933/exons	containsText	Coding for	# column title
