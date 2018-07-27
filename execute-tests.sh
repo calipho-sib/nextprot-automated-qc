@@ -17,7 +17,7 @@ fi
 
 # Check multiple times in case pre-rendering tool crashes in a test
 COUNTER=0
-while [ $COUNTER -lt 3 ] && [ -f errors.tsv ]; do
+while [ $COUNTER -lt 10 ] && [ -f errors.tsv ]; do
   if [ -f errors.tsv ]
   then
       echo "\n\nRetrying with the remaining errors in 3 seconds ... "
