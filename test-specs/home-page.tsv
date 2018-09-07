@@ -46,7 +46,7 @@ relativeUrl	expression	value	comment
 /	containsHTML	/about/protein-existence	Check link to documentation on protein existence in neXtProt (test nextprot link is found)
 /	countOnceInText	Release statistics	Check link label is displayed (test text is found only once)
 /	containsHTML	/about/statistics	Check link to documentation on release statistics (test nextprot link is found)
-/	containsRegexInHTML	© 2011 -(.{6,6})SIB Swiss Institute of Bioinformatics	Check link label is displayed (test copyright, first year of copyright and copyright holder is found)
+/	containsRegexInHTML	Â© 2011 -(.{6,6})SIB Swiss Institute of Bioinformatics	Check link label is displayed (test copyright, first year of copyright and copyright holder is found)
 /	containsHTML	/copyright	Check link to copyright information (test nextprot link is found)
 /	countOnceInText	Legal disclaimer	Check link label is displayed (test text is found only once)
 /	containsHTML	/legal-disclaimer	Check link to legal disclaimer (test nextprot link is found)
