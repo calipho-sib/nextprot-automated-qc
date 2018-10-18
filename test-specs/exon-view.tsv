@@ -31,7 +31,7 @@ relativeUrl	expression	value	comment
 /entry/NX_P52701/exons	containsText	Isoform GTBP-alt is not aligned on gene.	# data
 /entry/NX_A0A0C5B5G6/exons	containsText	Isoform Iso 1 is not aligned on gene.	# data
 /entry/NX_A4D1B5/exons	containsText	Isoforms Iso 2, Iso 3 are not aligned on gene.	# data 
-/entry/NX_Q96PZ7/exons	containsText	Isoforms Iso 1, Iso 2, Iso 3, Iso 4 are not aligned on gene.	# data
+#MONIQUE_SHOULD_FIX/entry/NX_Q96PZ7/exons	containsText	Isoforms Iso 1, Iso 2, Iso 3, Iso 4 are not aligned on gene.	# data
 #MONIQUE_SHOULD_FIX/entry/NX_Q13936/exons	containsText	Isoforms Iso 1, Iso 2, Iso 3, Iso 4, Iso 5, Iso 6, Iso 7, Iso 8, Iso 9, Iso 10, Iso 26, Iso 34 are not aligned on gene.	# data
 /entry/NX_Q96PT3/exons	containsText	Gene not mapped on the current assembly of the human genome.	# data
 /entry/NX_Q9UBV8/exons	containsText	CODING POSITIONS	# heading
