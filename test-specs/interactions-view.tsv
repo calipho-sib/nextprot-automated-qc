@@ -8,5 +8,5 @@ relativeUrl	expression	value	comment
 /entry/NX_Q5TG92/interactions	containsText	There is no interaction information available	SP_IV_01 Check display message when there are no general annotations related to interactions
 /entry/NX_Q6NUN7/interactions	containsText	122952	SP_IV_85 Check cross-reference to BioGrid is displayed (test link text is found)
 /entry/NX_Q96LM9/interactions	containsText	IntAct	SP_IV_85 Check cross-reference to IntAct is displayed (test text is found)
-/entry/NX_Q53S99/interactions	containsText	MINT-4722244	SP_IV_85 Check cross-reference to MINT is displayed (test link text is found)
+/entry/NX_O00763/interactions	containsHTML	http://mint.bio.uniroma2.it/cgi-bin/protein.py?id=O00763	SP_IV_85 Check cross-reference to MINT is displayed (test link text is found)
 /entry/NX_Q5T035/interactions	containsText	9606.ENSP00000364568	SP_IV_85 Check cross-reference to STRING is displayed (test link text is found)

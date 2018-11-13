@@ -1,0 +1,3 @@
+relativeUrl	expression	value	comment
+/entry/NX_Q5TG92/	containsText	PR:Q5TG92	Test passed in 7 ms on alpha and prod
+/entry/NX_P52701/phenotypes	countOnceInText	Protein also known as	Test passed in 2 ms on alpha and prod
