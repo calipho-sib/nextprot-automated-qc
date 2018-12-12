@@ -22,7 +22,7 @@ relativeUrl	expression	value	comment
 /about/protein-existence	countOnceInText	Total	Check column heading is displayed (test text is found only once)
 /about/protein-existence	countOnceInText	100	Check value is displayed (test text is found only once)
 /news/a-human-centric-discovery-platform	countOnceInText	News - 2011-04-21	Check title is displayed (test text is found only once)
-/news/a-human-centric-discovery-platform	countOnceInText	A human centric discovery platform	Check section heading is displayed (test text is found only once)
+/news/a-human-centric-discovery-platform	containsText	A human centric discovery platform	Check section heading is displayed (test text is found)
 /news/a-human-centric-discovery-platform	countOnceInText	This rich, high-quality content is made available via an innovative web interface	Check text is displayed (test text is found only once)
 /about/citing-nextprot	containsText	Citing neXtProt	Check title is displayed (test text is found)
 /about/citing-nextprot	countOnceInText	If neXtProt has been useful to your work	Check text in first section is displayed (test text is found only once)
