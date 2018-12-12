@@ -65,7 +65,7 @@ relativeUrl	expression	value	comment
 /help/advanced-search	countOnceInText	use the SPARQL Protocol and RDF Query Language (SPARQL) to access	Check text in first paragraph is displayed (test text is found only once)
 /help/advanced-search	containsHTML	https://raw.githubusercontent.com/calipho-sib/nextprot-docs/master/pages/assets/rdf-model.png	Check link to image for data model (test external link is found)
 /help/advanced-search	containsHTML	http://snorql.nextprot.org/help/doc/introduction	Check link to SnorQL interface (test link is found)
-/help/advanced-search	containsHTML	/user/queries	Check link to user queries (test nextprot link is found)
+/help/advanced-search	containsHTML	user/queries	Check link to user queries (test nextprot link is found)
 /help/search-results	countOnceInText	Help - Search results	Check title is displayed (test text is found)
 /help/search-results	countOnceInText	While the search in the protein section makes use of the information	Check text in first paragraph is displayed (test text is found only once)
 /help/search-results	containsHTML	/terms/search?query=alzheimer	Check link to search in terms (test nextprot link is found)
