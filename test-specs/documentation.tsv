@@ -7,7 +7,6 @@ relativeUrl	expression	value	comment
 /about/human-proteome	countOnceInText	Around 20,300 protein-coding genes have been predicted	Check text in first paragraph is displayed (test text is found only once)
 /about/human-proteome	containsHTML	/about/protein-existence	Check link to protein existence breakdown by chromosome (test nextprot link is found)
 /about/human-proteome	containsHTML	http://c-hpp.webhosting.rug.nl/tiki-index.php?page=Group%20composition	Check link to HPP project (test external link is found)
-/about/human-proteome	containsHTML	/proteins/search?mode=advanced&queryId=NXQ_00022	Check link to advanced query NXQ_00022 (test nextprot link is found)
 /about/contents	containsText	Release contents	Check title is displayed (test text is found)
 /about/contents	countOnceInText	Data release:	Check data release version is displayed (test label is found)
 /about/contents	countOnceInText	Application release:	Check application release version is displayed (test label is found)
