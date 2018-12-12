@@ -86,7 +86,7 @@ relativeUrl	expression	value	comment
 /help/download	containsHTML	https://api.nextprot.org/nextprot-export-v2.xsd	Check link to XSD in API (test link is found)
 /help/technical-corner	countOnceInText	Help - Technical corner	Check title is displayed (test text is found)
 /help/technical-corner	countOnceInText	The technical corner is dedicated to developers	Check text in first paragraph is displayed (test text is found only once)
-/help/technical-corner	containsHTML	/#programmatic-access	Check internal link to programmatic access section (test link is found)
+/help/technical-corner	containsHTML	#programmatic-access	Check internal link to programmatic access section (test link is found)
 /help/technical-corner	containsHTML	https://api.nextprot.org/	Check link to API (test link is found)
 /help/technical-corner	containsHTML	https://github.com/calipho-sib/nextprot-js	Check link to javascript library on GitHub (test external link is found)
 /help/technical-corner	containsHTML	http://jsfiddle.net/ddtxra/Lqkmuzm3/	Check link to jsfiddle example (test external link is found)
