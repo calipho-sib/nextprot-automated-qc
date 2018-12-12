@@ -1,5 +1,5 @@
 relativeUrl	expression	value	comment
-/	countOnceInText	Tools	Check menu option is displayed (test text is found only once)
+/	containsText	Tools	Check menu option is displayed (test text is found)
 /	countOnceInText	Portals	Check menu option is displayed (test text is found only once)
 /	containsText	Download	Check menu option is displayed (test text is found)
 /	containsHTML	ftp://ftp.nextprot.org/pub/current_release/	Check link to FTP site (test nextprot link is found)
@@ -8,9 +8,9 @@ relativeUrl	expression	value	comment
 /	countOnceInText	Contact	Check menu option is displayed (test text is found only once)
 /	containsHTML	"<a href=""mailto:support@nextprot.org?subject=[neXtProt%20Search]"">Contact</a>"	Check code to create mail to support (test HTML is found)
 /	countOnceInText	Login	Check menu option is displayed (test text is found only once)
-/	containsHTML	http://www.sib.swiss/	Check link to SIB web site (test link is found) !!! SHOULD be https !!!
-/	countOnceInText	Exploring the universe of human proteins	Check large logo is displayed (test text is found only once)
-/	countOnceInText	Gold only	Check search box is displayed (test text is found only once)
+/	containsHTML	http://www.sib.swiss	Check link to SIB web site (test link is found) !!! SHOULD be https !!!
+/	containsText	Exploring the universe of human proteins	Check large logo is displayed (test text is found)
+/	containsText	Gold only	Check search box is displayed (test text is found)
 /	countOnceInText	Search for MSH6 in proteins	Check simple search example is displayed (test text is found only once)
 /	containsHTML	/proteins/search?query=MSH6	Check link for simple search example (test nextprot link is found)
 /	countOnceInText	Search for author Doolittle in publications	Check simple search example is displayed (test text is found only once)
@@ -18,14 +18,14 @@ relativeUrl	expression	value	comment
 /	countOnceInText	Search for liver in terms	Check simple search example is displayed (test text is found only once)
 /	containsHTML	/terms/search?query=liver	Check link for simple search example (test nextprot link is found)
 /	countOnceInText	Getting started	Check section title is displayed (test text is found only once)
-/	countOnceInText	The human proteome	Check sub-section title is displayed (test text is found only once)
+/	containsText	The human proteome	Check sub-section title is displayed (test text is found)
 /	containsHTML	/about/human-proteome	Check link to documentation on human proteome (test nextprot link is found)
 /	containsHTML	/help/simple-search	Check link to help for simple search (test nextprot link is found)
 /	containsHTML	/help/advanced-search	Check link to help for advanced search (test nextprot link is found)
 /	countOnceInText	Explore	Check sub-section title is displayed (test text is found only once)
 /	countOnceInText	Analyze	Check sub-section title is displayed (test text is found only once)
 /	containsHTML	/help/download	Check link to help for download (test nextprot link is found)
-/	countOnceInText	Technical corner	Check sub-section title is displayed (test text is found only once)
+/	containsText	Technical corner	Check sub-section title is displayed (test text is found)
 /	containsHTML	/help/technical-corner	Check link to help for technical questions (test nextprot link is found)
 /	countOnceInText	Data sources	Check section title is displayed (test text is found only once)
 /	containsHTML	http://www.proteinatlas.org/	Check link to Protein Atlas (test link is found) !!! SHOULD be https !!!
@@ -36,15 +36,15 @@ relativeUrl	expression	value	comment
 /	containsHTML	http://www.ebi.ac.uk/GOA	Check link to GOA (test link is found)  !!! SHOULD be https !!!
 /	containsHTML	http://www.peptideatlas.org/	Check link to PeptideAtlas (test link is found)
 /	containsHTML	http://www.ebi.ac.uk/intact/	Check link to IntAct (test link is found)  !!! SHOULD be https !!!
-/	countOnceInText	Release contents	Check link label is displayed (test text is found only once)
+/	containsText	Release contents	Check link label is displayed (test text is found)
 /	containsHTML	/about/contents	Check link to documentation on release contents (test nextprot link is found)
 /	containsHTML	https://www.researchgate.net/project/neXtProt	Check link to neXtProt project in ResearchGate (test link is found)
 /	containsHTML	https://twitter.com/nextprot_news	Check link to neXtProt Twitter account (test link is found)
-/	countOnceInText	News archive	Check link label is displayed (test text is found only once)
+/	containsText	News archive	Check link label is displayed (test text is found)
 /	containsHTML	/news/	Check link to news (test nextprot link is found) NOTE: Link actually includes title of last news item
 /	countOnceInText	Protein existence in neXtProt	Check title of graphic is dispalyed (test text is found only once)
 /	containsHTML	/about/protein-existence	Check link to documentation on protein existence in neXtProt (test nextprot link is found)
-/	countOnceInText	Release statistics	Check link label is displayed (test text is found only once)
+/	containsText	Release statistics	Check link label is displayed (test text is found)
 /	containsHTML	/about/statistics	Check link to documentation on release statistics (test nextprot link is found)
 /	containsRegexInHTML	© 2011 -(.{6,6})SIB Swiss Institute of Bioinformatics	Check link label is displayed (test copyright, first year of copyright and copyright holder is found)
 /	containsHTML	/copyright	Check link to copyright information (test nextprot link is found)
