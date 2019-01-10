@@ -1,30 +1,28 @@
 relativeUrl	expression	value	comment
-/proteins/search?mode=advanced&start=0	countOnceInText	Tags	Check menu label in advanced search examples is displayed (test text is found only once)
-/proteins/search?mode=advanced&start=0	containsRegexInHTML	search in(.{5,5})queries (ex: liver)	Check search box in advanced search examples is displayed (test text is found)
-/proteins/search?mode=advanced&start=0	countOnceInText	New Query	Check New Query option is displayed (test text is found only once)
+/proteins/search?mode=advanced&start=0	containsHTML	(ex: liver)	Check search box in advanced search examples is displayed (test text is found in HTML)
+/proteins/search?mode=advanced&start=0	containsHTML	New Query	Check New Query option is displayed (test text is found in HTML)
 /proteins/search?mode=advanced&start=0	countOnceInText	Proteins phosphorylated and located in the cytoplasm	Check first advanced search example is displayed (test text is found only once)
-/proteins/search?mode=advanced&start=0	countOnceInText	NXQ_00001	Check first advanced search example ID is displayed (test text is found only once)
-/proteins/search?mode=advanced&start=0	containsHTML	/proteins/search?mode=advanced&queryId=NXQ_00001	Check link to first advanced search example (test nextprot link is found)
+/proteins/search?mode=advanced&start=0	containsText	NXQ_00001	Check first advanced search example ID is displayed (test text is found only once)
+/proteins/search?mode=advanced&start=0	containsHTML	proteins/search?mode=advanced&queryId=NXQ_00001	Check link to first advanced search example (test nextprot link is found)
 /proteins/search?mode=advanced&start=0	countOnceInText	For help with these queries look at	Check help information in advanced search examples is displayed (test text is found only once)
 /proteins/search?mode=advanced&start=0	containsHTML	http://snorql.nextprot.org/help/doc/introduction	Check link to neXtProt SnorQL help (test nextprot link is found)
 /proteins/search?mode=advanced&start=0	containsHTML	mailto:support@nextprot.org	Check link for contact us (test link is found)
-/proteins/search?mode=advanced&queryId=NXQ_00003	countOnceInText	#Proteins with 7 transmembrane regions	Check query NXQ_00003 is displayed (test text is found only once)
-/proteins/search?mode=advanced&queryId=NXQ_00003	containsRegexInHTML	Show((\n){1,20})1((\n){1,20})to	Check pagination for advanced search is displayed (test label is found)
+/proteins/search?mode=advanced&queryId=NXQ_00003	containsText	Proteins with 7 transmembrane regions	Check query NXQ_00003 is displayed (test text is found only once)
 /proteins/search?mode=advanced&queryId=NXQ_00003	countOnceInText	Details	Check toggle Summary / Details is displayed in results of advanced search (test label is found only once)
 /proteins/search?mode=advanced&queryId=NXQ_00003	countOnceInText	Sort	Check sorting option for results of advanced search is present (test label is found only once)
-/proteins/search?mode=advanced&queryId=NXQ_00003	countOnceInText	FILTERS	Check filters are display in results of advanced search (test label is found only once)
+/proteins/search?mode=advanced&queryId=NXQ_00003	countOnceInText	For proteins with:	Check filters are display in results of advanced search (test label is found only once)
 /proteins/search?mode=advanced&queryId=NXQ_00003	containsHTML	https://api.nextprot.org/export/	Check download option is displayed in results of advanced search (test URL is found)
-/proteins/search?mode=advanced&queryId=NXQ_00003	countOnceInText	NX_P47901	Check query NXQ_00003 returns AVPR1B AC
-/proteins/search?mode=advanced&queryId=NXQ_00003	containsHTML	/entry/NX_P47901	Check link to AVPR1B entry in header of result (test nextprot link is found)
-/proteins/search?mode=advanced&queryId=NXQ_00003	containsHTML	/entry/NX_P47901/exons	Check link to AVPR1B entry Exon view (test nextprot link is found)
-/proteins/search?mode=advanced&queryId=NXQ_00003	containsHTML	/entry/NX_P47901/sequence	Check link to AVPR1B entry Sequence view (test nextprot link is found)
-/proteins/search?mode=advanced&queryId=NXQ_00003	containsHTML	/entry/NX_P47901/expression	Check link to AVPR1B entry Expression view (test nextprot link is found)
-/proteins/search?mode=advanced&queryId=NXQ_00003	containsHTML	/entry/NX_P47901/proteomics	Check link to AVPR1B entry Proteomics view (test nextprot link is found)
-/proteins/search?mode=advanced&queryId=NXQ_00003	containsHTML	/entry/NX_P52701/function	Check link to AVPR1B entry Function view (test nextprot link is found)
-/proteins/search?mode=advanced&queryId=NXQ_00042&sort=gene	countOnceInText	NX_P49588	Check query NXQ_00042 with sorting by ascending gene name returns AARS AC
-/proteins/search?mode=advanced&queryId=NXQ_00038&sort=protein&order=desc	countOnceInText	NX_Q92813	Check query NXQ_00038 with sorting by descending protein name returns Type II iodothyronine deiodinase AC
-/proteins/search?mode=advanced&queryId=NXQ_00041&sort=family	countOnceInText	NX_Q86UL3	Check query NXQ_00041 with sorting by ascending protein family returns GPAT4 AC
-/proteins/search?mode=advanced&queryId=NXQ_00231&sort=chromosome&order=asc	countOnceInText	NX_B7ZW38	Check query NXQ_00231 with sorting by ascending chromosomal location returns HNRNPCL3 AC
-/proteins/search?mode=advanced&queryId=NXQ_00238&sort=ac&order=desc	countOnceInText	NX_Q9YNA8	Check query NXQ_00231 with sorting by descending AC returns ERVK-19 AC
-/proteins/search?mode=advanced&queryId=NXQ_00243&sort=length&order=desc	countOnceInText	NX_Q7Z5P9	Check query NXQ_00243 with sorting by descending protein length returns MUC19 AC
-/proteins/search?mode=advanced&queryId=NXQ_00136&order=desc	countOnceInText	NX_P41271	Check query NXQ_00136 with sorting by descending ranking score returns NBL1 AC
+/proteins/search?mode=advanced&queryId=NXQ_00003	countOnceInText	Platelet-activating factor receptor	Check query NXQ_00003 returns PTAFR (test recommended protein name is found only once)
+/proteins/search?mode=advanced&queryId=NXQ_00003	containsHTML	entry/NX_P25105	Check link to PTAFR entry in header of result (test nextprot link is found)
+/proteins/search?mode=advanced&queryId=NXQ_00003	containsHTML	entry/NX_P25105/exons	Check link to PTAFR entry Exon view (test nextprot link is found)
+/proteins/search?mode=advanced&queryId=NXQ_00003	containsHTML	entry/NX_P25105/sequence	Check link to PTAFR entry Sequence view (test nextprot link is found)
+/proteins/search?mode=advanced&queryId=NXQ_00003	containsHTML	entry/NX_P25105/expression	Check link to PTAFR entry Expression view (test nextprot link is found)
+/proteins/search?mode=advanced&queryId=NXQ_00003	containsHTML	entry/NX_P25105/proteomics	Check link to PTAFR entry Proteomics view (test nextprot link is found)
+/proteins/search?mode=advanced&queryId=NXQ_00003	containsHTML	entry/NX_P25105/function	Check link to PTAFR entry Function view (test nextprot link is found)
+/proteins/search?mode=advanced&queryId=NXQ_00042&sort=gene	containsText	NX_P49588	Check query NXQ_00042 with sorting by ascending gene name returns AARS AC
+/proteins/search?mode=advanced&queryId=NXQ_00038&sort=protein&order=desc	containsText	NX_Q92813	Check query NXQ_00038 with sorting by descending protein name returns Type II iodothyronine deiodinase AC
+/proteins/search?mode=advanced&queryId=NXQ_00041&sort=family	containsText	NX_Q86UL3	Check query NXQ_00041 with sorting by ascending protein family returns GPAT4 AC
+/proteins/search?mode=advanced&queryId=NXQ_00231&sort=chromosome&order=asc	containsText	NX_B7ZW38	Check query NXQ_00231 with sorting by ascending chromosomal location returns HNRNPCL3 AC
+/proteins/search?mode=advanced&queryId=NXQ_00238&sort=ac&order=desc	containsText	NX_Q9YNA8	Check query NXQ_00231 with sorting by descending AC returns ERVK-19 AC
+/proteins/search?mode=advanced&queryId=NXQ_00243&sort=length&order=desc	containsText	NX_Q7Z5P9	Check query NXQ_00243 with sorting by descending protein length returns MUC19 AC
+/proteins/search?mode=advanced&queryId=NXQ_00136&order=desc	containsText	NX_P41271	Check query NXQ_00136 with sorting by descending ranking score returns NBL1 AC
